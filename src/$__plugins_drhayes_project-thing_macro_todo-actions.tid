@@ -1,0 +1,19 @@
+created: 20220204163950511
+modified: 20220204164432096
+tags: $:/tags/Macro
+title: $:/plugins/drhayes/project-thing/macro/todo-actions
+type: text/vnd.tiddlywiki
+
+\define pt-save-actions()
+    <$action-sendmessage $message="tm-auto-save-wiki" />
+\end
+
+\define pt-check-actions()
+    <$action-setfield $field="completed" $value=<<now "[UTC]YYYY0MM0DD0hh0mm0ssXXX">> />
+    <$action-sendmessage $message="tm-remove-tag" $param="Doing" />
+    <$action-sendmessage $message="tm-remove-tag" $param="Later" />
+\end
+
+\define pt-uncheck-actions()
+    <$action-setfield $field="completed" />
+\end

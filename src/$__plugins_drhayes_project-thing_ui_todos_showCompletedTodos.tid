@@ -1,0 +1,25 @@
+created: 20211202154229495
+modified: 20211202161119007
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todos/showCompletedTodos
+type: text/vnd.tiddlywiki
+
+<$set name="stateTiddler" value=<<qualify "$:/state/projectThing/show-completed">>>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="true" default="false">
+		<h4>Completed Todos</h4>
+		<$list filter=<<pt-completed-todos>>>
+		  {{||$:/plugins/drhayes/project-thing/ui/todos/todoListItem}}
+		</$list>
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="false" tag="a" class="pt-toggle-completed-todos">
+			Hide completed todos
+		</$button>
+	</$reveal>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="false" default="false">
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="true" tag="a" class="pt-toggle-completed-todos">
+			Show completed todos
+		</$button>
+	</$reveal>
+	
+</$set>

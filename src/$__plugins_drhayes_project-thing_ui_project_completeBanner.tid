@@ -1,0 +1,12 @@
+created: 20211202151155683
+description: Displays a banner if this project is complete.
+modified: 20211202151232317
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/project/completeBanner
+type: text/vnd.tiddlywiki
+
+<$list filter=<<pt-is-complete>>>
+	<div class="pt-project-complete">
+		This project is complete.
+	</div>
+</$list>

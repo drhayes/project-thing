@@ -1,0 +1,15 @@
+created: 20211123210314499
+description: Show an empty checkbox if this todo is not complete, or a checked one if it is.
+modified: 20220127171748082
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todo/todoCheckbox
+type: text/vnd.tiddlywiki
+
+<div class="pt-todo-checkbox">
+  <$list filter=<<pt-is-open>>>
+    {{$:/plugins/drhayes/project-thing/images/square}}
+  </$list>
+  <$list filter=<<pt-is-complete>>>
+    {{$:/plugins/drhayes/project-thing/images/check-square}}
+  </$list>
+</div>

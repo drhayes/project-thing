@@ -1,0 +1,20 @@
+created: 20211202151342027
+description: Displays buttons for common project-level actions.
+modified: 20220201224146210
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/project/projectActions
+type: text/vnd.tiddlywiki
+
+<$fieldmangler>
+	<$list filter=<<pt-is-zen-garden>>>
+		<h5>Can't complete zen garden projects!</h5>
+	</$list>
+	
+	<$list filter=<<pt-is-not-zen-garden>>>
+		{{||$:/plugins/drhayes/project-thing/ui/project/markComplete}}
+		
+		<$list filter=<<pt-is-open>>>
+			{{||$:/plugins/drhayes/project-thing/ui/project/toggleOnHold}}
+		</$list>
+	</$list>
+</$fieldmangler>

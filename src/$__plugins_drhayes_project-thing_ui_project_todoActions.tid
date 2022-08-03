@@ -1,0 +1,36 @@
+created: 20220113163322382
+description: Displays buttons for common todo-level actions.
+modified: 20220126215628336
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/project/todoActions
+type: text/vnd.tiddlywiki
+
+<$fieldmangler>	
+	<$list filter=<<pt-is-todo>>>
+		<$list filter=<<pt-is-not-doing>>>
+			<$button message="tm-add-tag" param="Doing" tag="a" class="pt-doing-link">
+				Todo
+				<$action-sendmessage $message="tm-remove-tag" $param="Later" />
+			</$button>
+		</$list>
+	
+		<$list filter=<<pt-is-doing>>>
+			<$button message="tm-remove-tag" param="Doing" tag="a" class="pt-doing-link">
+				Doing
+			</$button>
+		</$list>
+
+		<$list filter=<<pt-is-not-later>>>
+			<$button message="tm-add-tag" param="Later" tag="a" class="pt-later-link">
+				Now
+				<$action-sendmessage $message="tm-remove-tag" $param="Doing" />
+			</$button>
+		</$list>
+
+		<$list filter=<<pt-is-later>>>
+			<$button message="tm-remove-tag" param="Later" tag="a" class="pt-later-link">
+				Later
+			</$button>
+		</$list>
+	</$list>
+</$fieldmangler>

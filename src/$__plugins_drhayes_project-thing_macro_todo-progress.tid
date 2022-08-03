@@ -1,0 +1,12 @@
+created: 20220131165241818
+description: Make a day-bucketed journal of progress for this <<tag Todo>>.
+modified: 20220201224306509
+tags: $:/tags/Macro
+title: $:/plugins/drhayes/project-thing/macro/todo-progress
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\define todo-progress()
+{{||$:/plugins/drhayes/project-thing/ui/todos/progressJournal}}
+{{||$:/plugins/drhayes/project-thing/ui/todo/addProgress}}
+\end

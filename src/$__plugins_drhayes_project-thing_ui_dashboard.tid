@@ -1,0 +1,22 @@
+created: 20211123154541052
+description: Provide high-level view of <<tag Project>>s.
+modified: 20220201194238606
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/dashboard
+type: text/vnd.tiddlywiki
+
+{{$:/plugins/drhayes/project-thing/ui/nowTodos}}
+
+{{$:/plugins/drhayes/project-thing/ui/inbox}}
+
+!! Projects
+
+<ol>
+	<$list filter=<<pt-active-projects>>>
+		<li>
+			<$link />
+		</li>
+	</$list>
+</ol>
+
+

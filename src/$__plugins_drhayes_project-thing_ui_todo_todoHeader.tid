@@ -1,0 +1,17 @@
+created: 20220113163939807
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20220113165516108
+tags: $:/tags/ViewTemplate
+title: $:/plugins/drhayes/project-thing/ui/todo/todoHeader
+transcludedin: Any tiddler tagged with <<tag Todo>>.
+type: text/vnd.tiddlywiki
+
+<$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
+
+  <$list filter=<<pt-is-todo>> variable="ignore">
+	
+		{{||$:/plugins/drhayes/project-thing/ui/project/todoActions}}
+	
+	</$list>
+
+</$reveal>

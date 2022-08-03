@@ -1,0 +1,103 @@
+created: 20211123154127538
+modified: 20220621155710217
+tags: $:/tags/Stylesheet
+title: $:/plugins/drhayes/project-thing/styles/todos
+type: text/vnd.tiddlywiki
+
+.pt-todo {
+  display: inline-block;
+}
+
+/* Notebook theme hides view toolbar via opacity. Don't hide checkbox */
+.pt-todo svg {
+	opacity: 1 !important;
+}
+
+.pt-todo input[type="checkbox"] {
+	display: none;
+}
+
+.pt-todo-item {
+	list-style-type: none;
+}
+
+.pt-add-todo {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.pt-add-todo input[type="text"] {
+	width: 100%;
+}
+
+.pt-todo-checkbox {
+	display: inline-block;
+	width: 0.8em;
+}
+
+.pt-todo-pinned {
+	display: inline-block;
+	width: 0.6em;
+}
+
+.pt-todo-checkbox svg, .pt-todo-pinned svg {
+	vertical-align: middle;
+}
+
+.pt-pinned {
+	color: red;
+}
+
+.pt-not-pinned {
+	color: inherit;
+}
+
+.pt-todo-list-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pt-todo-list-item .pt-drag-handle {
+	flex-basis: 1em;
+	margin-right: .5em;
+	cursor: pointer;
+}
+
+.pt-todo-list-item .pt-drag-handle svg {
+	vertical-align: middle;
+}
+
+.pt-todo-list-item .pt-todo {
+	flex-grow: 1;
+}
+
+.pt-project-complete {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	font-size: 1.5em;
+	color: <<color foreground>>
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid <<color muted-foreground>>
+	border-bottom: 1px solid <<color muted-foreground>>;
+}
+
+.pt-toggle-completed-todos {
+	color: <<color muted-foreground>>;
+  text-decoration: underline dotted <<color muted-foreground>>;
+	cursor: pointer;
+}
+
+.pt-toggle-recently-completed-todos {
+	color: <<color muted-foreground>>;
+  text-decoration: underline dotted <<color muted-foreground>>;
+	cursor: pointer;
+}
+
+.pt-doing-link {
+	{{$:/plugins/drhayes/project-thing/templates/actionLinkStyles}}
+}
+
+.pt-later-link {
+	{{$:/plugins/drhayes/project-thing/templates/actionLinkStyles}}
+}

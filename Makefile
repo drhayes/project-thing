@@ -19,3 +19,5 @@ out/index.html: out node_modules $(SOURCES)
 out:
 	mkdir -p out
 
+serve:
+	$(TW) wiki/ --listen port=9999

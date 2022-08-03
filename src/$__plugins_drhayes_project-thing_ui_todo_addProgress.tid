@@ -1,0 +1,38 @@
+created: 20220127171211698
+modified: 20220201225422658
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todo/addProgress
+type: text/vnd.tiddlywiki
+
+\define add-progress-actions()
+<$list
+	filter="[<stateTiddler>get[progress-text]trim[]!is[blank]]"
+	variable="ignore">
+	<$wikify
+		name="progressTitle"
+		text="""<$macrocall $name="now" format="<<currentTiddler>>/YYYY-0MM-0DD 0hh:0mm:0ss" />""">
+			<$action-createtiddler
+				$basetitle=<<progressTitle>>
+				text={{{ [<stateTiddler>get[progress-text]] }}}>
+				<$action-listops $tiddler=<<createTiddler-title>> $tags="Progress" />
+				<$action-deletefield $tiddler=<<stateTiddler>> $field="progress-text" />
+			</$action-createtiddler>
+	</$wikify>
+	<$action-sendmessage $message="tm-auto-save-wiki" />
+</$list>
+\end
+
+<div class="pt-add-progress">
+	<$vars stateTiddler=<<qualify "$:/temp/projectThing/add-progress-form">>>
+		<$keyboard key="enter">
+			<<add-progress-actions>>
+			<$edit-text
+				tiddler=<<stateTiddler>>
+				field="progress-text"
+				placeholder="Record progress here..."
+				tag="textarea"
+				autoHeight="yes"
+			/>
+		</$keyboard>
+	</$vars>
+</div>

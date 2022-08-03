@@ -1,0 +1,32 @@
+created: 20211129161932947
+description: Display a single <<tag Todo>> suitable for displaying in a list of todos.
+modified: 20220602034942076
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todos/todoListItem
+type: text/vnd.tiddlywiki
+
+<div class="pt-todo-list-item">
+  <$list filter="[<drag-handles>!is[blank]]" variable="ignore">
+		<$draggable
+			tag="span"
+			class="pt-drag-handle"
+			tiddler={{!!title}}
+		>
+			{{$:/plugins/drhayes/project-thing/images/menu}}
+		</$draggable>
+	</$list>
+
+	{{||$:/plugins/drhayes/project-thing/ui/todo/singleTodo}}
+	
+	<div class="pt-labels">
+		<$list filter=<<pt-is-bug>> variable="ignore">
+			<<short-tag Bug>>
+		</$list>
+		<$list filter=<<pt-is-later>> variable="ignore">
+			<<short-tag Later>>
+		</$list>
+		<$list filter=<<pt-is-doing>> variable="ignore">
+			<<short-tag Doing>>
+		</$list>
+	</div>
+</div>

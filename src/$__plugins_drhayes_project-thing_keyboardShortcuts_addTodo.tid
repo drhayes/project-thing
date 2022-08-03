@@ -1,0 +1,10 @@
+created: 20211208210001033
+key: ((add-todo))
+modified: 20211208211051929
+tags: $:/tags/KeyboardShortcut
+title: $:/plugins/drhayes/project-thing/keyboardShortcuts/addTodo
+type: text/vnd.tiddlywiki
+
+<$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
+	<$action-sendmessage $message="tm-new-tiddler" tags="Inbox Todo" />
+</$navigator>

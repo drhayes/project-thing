@@ -1,0 +1,18 @@
+created: 20220201201516306
+description: Shows the button to mark a project completed. Wrap in a field mangler widget!
+modified: 20220201202802598
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/project/markComplete
+type: text/vnd.tiddlywiki
+
+<$list filter=<<pt-is-open>> variable="ignore">
+	<$button message="tm-add-tag" tag="a" param="Complete" class="pt-complete-link">
+		Not Complete
+	</$button>
+</$list>
+
+<$list filter=<<pt-is-complete>> variable="ignore">
+	<$button message="tm-remove-tag" tag="a" param="Complete" class="pt-complete-link">
+		Completed
+	</$button>
+</$list>

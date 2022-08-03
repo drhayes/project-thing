@@ -1,7 +1,7 @@
 created: 20220802144437566
 modified: 20220802144446264
-tags: 
+tags:
 title: project-thing-plugin
 type: text/vnd.tiddlywiki
 
-Just testing some stuff.
+{{ $:/plugins/drhayes/project-thing/README }}

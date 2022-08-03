@@ -1,0 +1,25 @@
+created: 20220104223739851
+modified: 20220126213859958
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todos/showLaterTodos
+type: text/vnd.tiddlywiki
+
+<$set name="stateTiddler" value=<<qualify "$:/state/projectThing/show-laters">>>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="true" default="false">
+		<h4>Later Todos</h4>
+		<$list filter=<<pt-later-todos>>>
+		  {{||$:/plugins/drhayes/project-thing/ui/todos/todoListItem}}
+		</$list>
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="false" tag="a" class="pt-toggle-completed-todos">
+			Hide later todos
+		</$button>
+	</$reveal>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="false" default="false">
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="true" tag="a" class="pt-toggle-completed-todos">
+			Show later todos
+		</$button>
+	</$reveal>
+	
+</$set>

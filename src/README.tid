@@ -1,0 +1,20 @@
+title: $:/plugins/drhayes/project-thing/README
+
+\define plugin() $:/plugins/drhayes/project-thing
+\define install()
+<$list
+  filter="[<transclusion>prefix[{$(plugin)$/README|$(plugin)$/README|||}]]"
+  emptyMessage="$(plugin)$"
+>
+{{ $(plugin)$||$:/core/ui/Components/plugin-info }}
+</$list>
+\end
+
+!! Simple Project Management in Tiddlywiki
+
+!!! Installation
+
+Drag this to your ~TiddlyWiki:
+
+<<install>>
+

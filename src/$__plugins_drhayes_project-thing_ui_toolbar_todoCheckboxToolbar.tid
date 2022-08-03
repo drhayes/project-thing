@@ -1,0 +1,17 @@
+caption: {{$:/plugins/drhayes/project-thing/images/check-square}} mark-complete
+created: 20211123204751949
+description: Display a checkbox for marking Todo tiddlers as Complete.
+modified: 20220204164403078
+tags: $:/tags/ViewToolbar Template $:/tags/EditToolbar
+title: $:/plugins/drhayes/project-thing/ui/toolbar/todoCheckboxToolbar
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]tag[Todo]]">
+  <div class="pt-todo">
+		<$fieldmangler>
+			<$checkbox tag="Complete" actions=<<pt-save-actions>> checkactions=<<pt-check-actions>> uncheckactions=<<pt-uncheck-actions>>>
+	      {{||$:/plugins/drhayes/project-thing/ui/todo/todoCheckbox}}
+    	</$checkbox>
+		</$fieldmangler>
+  </div>
+</$list>

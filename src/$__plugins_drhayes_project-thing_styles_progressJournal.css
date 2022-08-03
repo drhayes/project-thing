@@ -1,0 +1,38 @@
+.pt-add-progress {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.pt-add-progress textarea {
+	width: 100%;
+}
+
+.pt-progress-entries .pt-progress-entry {
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.pt-progress-entry .pt-journal-time {
+	font-weight: bold;
+	margin-right: 1em;
+}
+
+.pt-progress-entry .pt-journal-text {
+	flex: 1;
+}
+
+.pt-progress-entry .pt-journal-text p:first-child {
+	margin-top: 0;
+}
+
+.pt-progress-entry .pt-journal-text p {
+	margin-bottom: 0;
+}
+
+.pt-progress-entry a.pt-journal-link {
+	margin-left: 1em;
+	text-decoration: none;
+}

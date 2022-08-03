@@ -1,0 +1,34 @@
+created: 20220131171550887
+description: Display the <<tag Progress>> journal for the current tiddler, bucketed by day.
+modified: 20220201230627259
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todos/progressJournal
+type: text/vnd.tiddlywiki
+
+<$list
+	filter="[prefix<currentTiddler>tag[Progress]sort[created]eachday[created]]"
+	variable="progressTiddler">
+	<h3>
+		<$view
+			tiddler=<<progressTiddler>>
+			field="created"
+			format="date"
+			template="YYYY-MM-DD" />
+	</h3>
+	<$set name="currentDate" tiddler=<<progressTiddler>> field="created">
+		<ol class="pt-progress-entries">
+			<$list
+				filter="[prefix<currentTiddler>sameday:created<currentDate>tag[Progress]sort[created]]">
+				<li class="pt-progress-entry">
+					<time class="pt-journal-time">
+						<$view field="created" format="date" template="hh12:0mmam" />:
+					</time>
+					<section class="pt-journal-text">
+						<$transclude mode="block" />
+					</section>
+					<$link class="pt-journal-link">🔗</$link>
+				</li>
+			</$list>
+		</ol>
+	</$set>
+</$list>

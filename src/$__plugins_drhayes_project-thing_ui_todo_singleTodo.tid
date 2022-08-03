@@ -1,0 +1,17 @@
+created: 20211123152046991
+description: Display the linked title of a single <<tag Todo>> along with a checkbox to mark it complete.
+modified: 20220602052547141
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todo/singleTodo
+type: text/vnd.tiddlywiki
+
+<div class="pt-todo">
+	<$fieldmangler>
+		<$checkbox tag="Complete" actions=<<pt-save-actions>> checkactions=<<pt-check-actions>> uncheckactions=<<pt-uncheck-actions>>>
+			{{||$:/plugins/drhayes/project-thing/ui/todo/todoCheckbox}}
+			<$link>
+				<$text text={{{ [all[current]trim<currentProject>trim[/]] }}}/>
+			</$link>
+		</$checkbox>
+	</$fieldmangler>
+</div>

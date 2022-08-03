@@ -1,0 +1,24 @@
+created: 20220621155114129
+modified: 20220621155531617
+tags: Template
+title: $:/plugins/drhayes/project-thing/ui/todos/showRecentlyCompleted
+type: text/vnd.tiddlywiki
+
+<$set name="stateTiddler" value=<<qualify "$:/state/projectThing/show-recently-completed">>>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="true" default="false">
+		<h4>Recently Completed</h4>
+		<$macrocall $name="list-links" filter=<<pt-recently-completed-todos>> />
+
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="false" tag="a" class="pt-toggle-recently-completed-todos">
+			Hide recently completed todos
+		</$button>
+	</$reveal>
+
+	<$reveal stateTitle=<<stateTiddler>> stateIndex="showing" type="match" text="false" default="false">
+		<$button setTitle=<<stateTiddler>> setIndex="showing" setTo="true" tag="a" class="pt-toggle-recently-completed-todos">
+			Show recently completed todos
+		</$button>
+	</$reveal>
+	
+</$set>

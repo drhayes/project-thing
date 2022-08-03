@@ -6,5 +6,5 @@
   "core-version": ">=5.0.0",
   "source": "https://github.com/drhayes/project-thing",
   "plugin-type": "plugin",
-  "list": "MIT License"
+  "list": "README License"
 }

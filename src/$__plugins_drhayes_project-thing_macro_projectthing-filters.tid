@@ -1,0 +1,77 @@
+created: 20211201033402443
+modified: 20220621155344853
+tags: $:/tags/Macro
+title: $:/plugins/drhayes/project-thing/macro/projectthing-filters
+type: text/vnd.tiddlywiki
+
+\define pt-is-project()
+[all[current]tag[Project]]
+\end
+
+\define pt-is-todo()
+[all[current]tag[Todo]]
+\end
+
+\define pt-is-zen-garden()
+[all[current]tag[Project]tag[Zen Garden]]
+\end
+
+\define pt-is-not-zen-garden()
+[all[current]tag[Project]!tag[Zen Garden]]
+\end
+
+\define pt-is-open()
+[all[current]!tag[Complete]]
+\end
+
+\define pt-is-complete()
+[all[current]tag[Complete]]
+\end
+
+\define pt-is-on-hold()
+[all[current]tag[On-hold]]
+\end
+
+\define pt-is-not-on-hold()
+[all[current]!tag[On-hold]]
+\end
+
+\define pt-is-bug()
+[all[current]tag[Bug]]
+\end
+
+\define pt-open-todos-subfilter()
+prefix<currentProject>!tag[Complete]!tag[On-hold]!tag[Later]
+\end
+
+\define pt-completed-todos()
+[prefix<currentTiddler>tag[Todo]tag[Complete]]
+\end
+
+\define pt-recently-completed-todos()
+[prefix<currentTiddler>tag[Todo]tag[Complete]!sort[completed]first[10]]
+\end
+
+\define pt-later-todos()
+[prefix<currentTiddler>tag[Todo]tag[Later]] +[contains:project<currentTiddler>tag[Todo]tag[Later]]
+\end
+
+\define pt-active-projects()
+[tag[Project]!tag[Complete]!tag[PITS]!tag[On-hold]!has[draft.of]sortan[]]
+\end
+
+\define pt-is-doing()
+[all[current]tag[Doing]]
+\end
+
+\define pt-is-not-doing()
+[all[current]!tag[Doing]]
+\end
+
+\define pt-is-later()
+[all[current]tag[Later]]
+\end
+
+\define pt-is-not-later()
+[all[current]!tag[Later]]
+\end
