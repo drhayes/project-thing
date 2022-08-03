@@ -2,6 +2,8 @@
 
 A Tiddlywiki plugin for managing projects and todos.
 
+Check out a demo at: https://drhayes.github.io/project-thing/
+
 This is an uglier, less featureful version of Projectify by Nicolas Petton: https://github.com/NicolasPetton/Projectify If you're looking for project management in Tiddlywiki, go check that repo out. That project is part of what made me go all-in on Tiddlywiki and many of the practices and macros and tiddlers in this project came from Projectify. It's a huge part of what made me more confident in modifying my local wiki to suit me like a favorite shoe, to fashion it into a true convivial tool.
 
 That said, in this repo I've made some decisions that work better for me vs. Projectify:
