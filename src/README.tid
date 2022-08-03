@@ -16,6 +16,8 @@ A Tiddlywiki plugin for managing projects and todos.
 
 This is an uglier, less featureful version of Projectify by Nicolas Petton: https://github.com/NicolasPetton/Projectify
 
+* Code: https://github.com/drhayes/project-thing
+
 !!! Installation
 
 Drag this to your ~TiddlyWiki:
