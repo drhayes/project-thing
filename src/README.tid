@@ -12,6 +12,10 @@ title: $:/plugins/drhayes/project-thing/README
 
 !! Simple Project Management in Tiddlywiki
 
+A Tiddlywiki plugin for managing projects and todos.
+
+This is an uglier, less featureful version of Projectify by Nicolas Petton: https://github.com/NicolasPetton/Projectify
+
 !!! Installation
 
 Drag this to your ~TiddlyWiki:
