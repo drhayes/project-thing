@@ -12,7 +12,13 @@ clean:
 node_modules:
 	npm install
 
-out/index.html: out node_modules $(SOURCES)
+wiki/plugins/project-thing: wiki/plugins
+	ln -s ../../src ./wiki/plugins/project-thing
+
+wiki/plugins:
+	mkdir -p wiki/plugins
+
+out/index.html: out node_modules $(SOURCES) wiki/plugins/project-thing
 	@$(TW) --version
 	@$(TW) ./wiki/ --build index
 
