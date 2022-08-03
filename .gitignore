@@ -8,3 +8,6 @@ node_modules/
 
 # Don't save what's in the story list.
 wiki/tiddlers/$__StoryList.tid
+
+# Build artifacts.
+out/

@@ -1,13 +1,21 @@
-.PHONY: all
+.PHONY: all clean
 
-all: node_modules wiki/plugins/project-thing
-	npm run wiki
+TW := node_modules/.bin/tiddlywiki
+SOURCES := $(shell find wiki/ src/)
+
+all: out/index.html
+
+clean:
+	rm -rf node_modules
+	rm -rf out
 
 node_modules:
 	npm install
 
-wiki/plugins/project-thing: wiki/plugins
-	ln -s ../../src ./wiki/plugins/project-thing
+out/index.html: out node_modules $(SOURCES)
+	@$(TW) --version
+	@$(TW) ./wiki/ --build index
 
-wiki/plugins:
-	mkdir -p wiki/plugins
+out:
+	mkdir -p out
+
