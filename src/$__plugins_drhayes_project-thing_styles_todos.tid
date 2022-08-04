@@ -1,5 +1,5 @@
 created: 20211123154127538
-modified: 20220621155710217
+modified: 20220804210311123
 tags: $:/tags/Stylesheet
 title: $:/plugins/drhayes/project-thing/styles/todos
 type: text/vnd.tiddlywiki
@@ -11,6 +11,10 @@ type: text/vnd.tiddlywiki
 /* Notebook theme hides view toolbar via opacity. Don't hide checkbox */
 .pt-todo svg {
 	opacity: 1 !important;
+}
+
+.tc-tiddler-controls .pt-todo svg {
+	color: <<color tiddler-controls-foreground>>;
 }
 
 .pt-todo input[type="checkbox"] {
@@ -28,11 +32,6 @@ type: text/vnd.tiddlywiki
 
 .pt-add-todo input[type="text"] {
 	width: 100%;
-}
-
-.pt-todo-checkbox {
-	display: inline-block;
-	width: 0.8em;
 }
 
 .pt-todo-pinned {
