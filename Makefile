@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean serve
 
 TW := node_modules/.bin/tiddlywiki
 SOURCES := $(shell find wiki/ src/)
@@ -9,6 +9,12 @@ clean:
 	rm -rf node_modules
 	rm -rf out
 
+serve: node_modules wiki/plugins/project-thing src/plugin.info
+	$(TW) wiki/ --listen port=9999
+
+src/plugin.info: src/$$__plugins_drhayes_project-thing_version.json
+	./etc/setVersion.sh
+
 node_modules:
 	npm install
 
@@ -18,12 +24,10 @@ wiki/plugins/project-thing: wiki/plugins
 wiki/plugins:
 	mkdir -p wiki/plugins
 
-out/index.html: out node_modules $(SOURCES) wiki/plugins/project-thing
+out/index.html: out node_modules $(SOURCES) wiki/plugins/project-thing src/plugin.info
 	@$(TW) --version
 	@$(TW) ./wiki/ --build index
 
 out:
 	mkdir -p out
 
-serve:
-	$(TW) wiki/ --listen port=9999

@@ -1,11 +1,11 @@
 created: 20220201202436520
 description: Used as styles for all the "action links" in the projects and todos.
-modified: 20220201202507901
+modified: 20220805141721269
 tags: Template
 title: $:/plugins/drhayes/project-thing/templates/actionLinkStyles
 type: text/vnd.tiddlywiki
 
-color: white;
+color: <<color primary>>;
 font-weight: bold;
 font-variant: small-caps;
 cursor: pointer;
