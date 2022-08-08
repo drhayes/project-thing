@@ -1,15 +1,25 @@
 created: 20211201040222865
 modified: 20220808043311379
-tags: 
+tags:
 title: $:/plugins/drhayes/project-thing/ui/inbox
 type: text/vnd.tiddlywiki
 
+\define inbox-todo-tags()
+\end
+
 !! Inbox
 
-<$vars todo-tags={{$:/config/project-thing/todo-tag}}>
-{{||$:/plugins/drhayes/project-thing/ui/todos/addTodo}}
-</$vars>
+<$set name="todo-tags" filter="[{$:/config/project-thing/todo-tag}] [{$:/config/project-thing/inbox-tag}]">
+	<$vars currentTiddler={{$:/config/project-thing/inbox-tag}}>
+		{{||$:/plugins/drhayes/project-thing/ui/todos/addTodo}}
+	</$vars>
+</$set>
 
 <$vars currentTiddler={{$:/config/project-thing/inbox-tag}} drag-handles="true" currentProject={{$:/config/project-thing/inbox-tag}}>
-<<todo-list>>
+	<$macrocall
+		$name="list-tagged-draggable"
+		tag={{$:/config/project-thing/todo-tag}}
+		subFilter=<<pt-open-inbox-todos-subfilter>>
+		itemTemplate="$:/plugins/drhayes/project-thing/ui/todos/todoListItem"
+	/>
 </$vars>

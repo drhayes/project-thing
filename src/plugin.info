@@ -1,0 +1,10 @@
+{
+  "title": "$:/plugins/drhayes/project-thing",
+  "description": "A Tiddlywiki plugin for managing projects and todos.",
+  "author": "David Hayes (hi@drhayes.io)",
+  "version": "1.2.1",
+  "core-version": ">=5.0.0",
+  "source": "https://github.com/drhayes/project-thing",
+  "plugin-type": "plugin",
+  "list": "README License"
+}

@@ -14,13 +14,10 @@ type: text/vnd.tiddlywiki
 	  >
 
 	  	<$action-listops $tiddler=<<createTiddler-title>> $tags=<<todo-tags>>/>
-			
 			<$action-setfield $tiddler=<<createTiddler-title>> $field="caption" $value={{{ [<stateTiddler>get[todo-name]] }}} />
-			
 			<$action-listops $tiddler=<<createTiddler-title>> $field="project" $filter="[all[current]get[title]]" />
-	
 	  	<$action-deletefield $tiddler=<<stateTiddler>> $field="todo-name"/>
-		
+
 		</$action-createtiddler>
 	</$wikify>
 

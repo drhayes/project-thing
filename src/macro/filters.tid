@@ -48,6 +48,10 @@ prefix<currentProject>!tag{$:/config/project-thing/complete-tag}!tag{$:/config/p
 [prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/complete-tag}]
 \end
 
+\define pt-open-inbox-todos-subfilter()
+tag{$:/config/project-thing/inbox-tag}!tag{$:/config/project-thing/complete-tag}!tag{$:/config/project-thing/on-hold-tag}!tag{$:/config/project-thing/later-tag}
+\end
+
 \define pt-recently-completed-todos()
 [prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/complete-tag}!sort[completed]first[10]]
 \end
