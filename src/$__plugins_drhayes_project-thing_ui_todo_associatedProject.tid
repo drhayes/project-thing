@@ -1,16 +1,16 @@
 created: 20220602035724854
-description: Shows the project associated with this <<tag Todo>>.
+description: Shows the project associated with this todo.
 list-before: $:/core/ui/ViewTemplate/body
-modified: 20220602040051225
+modified: 20220808043506267
 tags: Template $:/tags/ViewTemplate
 title: $:/plugins/drhayes/project-thing/ui/todo/associatedProject
-transcludedin: Anything tagged <<tag Todo>> with a "project" field set.
+transcludedin: Anything tagged with the todo tag with a "project" field set.
 type: text/vnd.tiddlywiki
 
+<$list filter="[all[current]tag{$:/config/project-thing/todo-tag}has[project]]">
 <$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Todo]has[project]]">
 
 | !Project|{{!!project}}|
 
-</$list>
 </$reveal>
+</$list>

@@ -1,9 +1,9 @@
 created: 20211123145042512
 list-before: $:/core/ui/ViewTemplate/body
-modified: 20220621155549945
+modified: 20220807183321755
 tags: $:/tags/ViewTemplate
 title: $:/plugins/drhayes/project-thing/ui/project/projectHeader
-transcludedin: Any tiddler tagged with <<tag Project>>.
+transcludedin: Any tiddler tagged with the configured project tag, usually <<tag Project>>.
 type: text/vnd.tiddlywiki
 
 <$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
@@ -16,7 +16,7 @@ type: text/vnd.tiddlywiki
 
 		<$list filter=<<pt-is-open>> variable="ignore">
 					
-			<$vars todo-tags="Todo">
+			<$vars todo-tags={{$:/config/project-thing/todo-tag}}>
 				{{||$:/plugins/drhayes/project-thing/ui/todos/addTodo}}
 			</$vars>
 			
@@ -30,7 +30,7 @@ type: text/vnd.tiddlywiki
 		
 		{{||$:/plugins/drhayes/project-thing/ui/todos/showRecentlyCompleted}}
 		
-		<$list filter="[tag<currentTiddler>tag[Todo]tag[Later]count[]compare:integer:gt[0]]" variable="ignore">
+		<$list filter=<<pt-has-later-todos>> variable="ignore">
 			{{||$:/plugins/drhayes/project-thing/ui/todos/showLaterTodos}}
 		</$list>
 	

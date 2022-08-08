@@ -1,5 +1,5 @@
 created: 20220127171211698
-modified: 20220201225422658
+modified: 20220808044148523
 tags: Template
 title: $:/plugins/drhayes/project-thing/ui/todo/addProgress
 type: text/vnd.tiddlywiki
@@ -14,7 +14,7 @@ type: text/vnd.tiddlywiki
 			<$action-createtiddler
 				$basetitle=<<progressTitle>>
 				text={{{ [<stateTiddler>get[progress-text]] }}}>
-				<$action-listops $tiddler=<<createTiddler-title>> $tags="Progress" />
+				<$action-listops $tiddler=<<createTiddler-title>> $tags={{$:/config/project-thing/progress-tag}} />
 				<$action-deletefield $tiddler=<<stateTiddler>> $field="progress-text" />
 			</$action-createtiddler>
 	</$wikify>

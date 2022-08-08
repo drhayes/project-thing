@@ -1,15 +1,15 @@
 created: 20211201040222865
-modified: 20220602051238254
+modified: 20220808043311379
 tags: 
 title: $:/plugins/drhayes/project-thing/ui/inbox
 type: text/vnd.tiddlywiki
 
 !! Inbox
 
-<$vars todo-tags="Todo">
+<$vars todo-tags={{$:/config/project-thing/todo-tag}}>
 {{||$:/plugins/drhayes/project-thing/ui/todos/addTodo}}
 </$vars>
 
-<$vars currentTiddler="Inbox" drag-handles="true" currentProject="Inbox">
+<$vars currentTiddler={{$:/config/project-thing/inbox-tag}} drag-handles="true" currentProject={{$:/config/project-thing/inbox-tag}}>
 <<todo-list>>
 </$vars>

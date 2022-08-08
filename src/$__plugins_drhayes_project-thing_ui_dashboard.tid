@@ -1,6 +1,6 @@
 created: 20211123154541052
-description: Provide high-level view of <<tag Project>>s.
-modified: 20220201194238606
+description: Provide high-level view of projects.
+modified: 20220807165735328
 tags: Template
 title: $:/plugins/drhayes/project-thing/ui/dashboard
 type: text/vnd.tiddlywiki

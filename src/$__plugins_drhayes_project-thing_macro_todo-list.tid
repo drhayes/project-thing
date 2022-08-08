@@ -1,5 +1,5 @@
 created: 20211201040823372
-modified: 20220602042415607
+modified: 20220808043353444
 tags: $:/tags/Macro
 title: $:/plugins/drhayes/project-thing/macro/todo-list
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 \define todo-list()
 	<$macrocall
 		$name="list-tagged-draggable"
-		tag="Todo"
+		tag={{$:/config/project-thing/todo-tag}}
 		subFilter=<<pt-open-todos-subfilter>>
 		itemTemplate="$:/plugins/drhayes/project-thing/ui/todos/todoListItem"
 	/>	

@@ -1,6 +1,6 @@
 created: 20211129161932947
 description: Display a single <<tag Todo>> suitable for displaying in a list of todos.
-modified: 20220602034942076
+modified: 20220808035735997
 tags: Template
 title: $:/plugins/drhayes/project-thing/ui/todos/todoListItem
 type: text/vnd.tiddlywiki
@@ -20,13 +20,13 @@ type: text/vnd.tiddlywiki
 	
 	<div class="pt-labels">
 		<$list filter=<<pt-is-bug>> variable="ignore">
-			<<short-tag Bug>>
+			<$macrocall $name="short-tag" tag={{$:/config/project-thing/bug-tag}} />
 		</$list>
 		<$list filter=<<pt-is-later>> variable="ignore">
-			<<short-tag Later>>
+			<$macrocall $name="short-tag" tag={{$:/config/project-thing/later-tag}} />
 		</$list>
 		<$list filter=<<pt-is-doing>> variable="ignore">
-			<<short-tag Doing>>
+			<$macrocall $name="short-tag" tag={{$:/config/project-thing/doing-tag}} />
 		</$list>
 	</div>
 </div>

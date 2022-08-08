@@ -1,0 +1,36 @@
+caption: Project Thing
+created: 20220806213553527
+list-after: $:/core/ui/ControlPanel/Settings/TiddlyWiki
+modified: 20220808045349647
+tags: $:/tags/ControlPanel/SettingsTab
+title: $:/plugins/drhayes/project-thing/ui/settings
+type: text/vnd.tiddlywiki
+
+These settings let you customize the behavior of [[Project Thing|$:/plugins/drhayes/project-thing]].
+
+!!! Tags
+
+Customize what Project Thing uses to mark tiddlers it cares about.
+
+Please don't change these if you currently have any tiddlers with these tags managed by Project Thing. It will just break things for you until you re-tag those tiddlers. What a pain that would be.
+
+!!!! Common Tags
+
+Tags used all the time, all over the place.
+
+|[[Project|$:/config/project-thing/project-tag]] |<$edit-text tiddler="$:/config/project-thing/project-tag" tag="input" />|
+|[[Todo|$:/config/project-thing/todo-tag]] |<$edit-text tiddler="$:/config/project-thing/todo-tag" tag="input" />|
+|[[Complete|$:/config/project-thing/complete-tag]] |<$edit-text tiddler="$:/config/project-thing/complete-tag" tag="input" />|
+|[[Doing|$:/config/project-thing/doing-tag]] |<$edit-text tiddler="$:/config/project-thing/doing-tag" tag="input" />|
+|[[On-hold|$:/config/project-thing/on-hold-tag]] |<$edit-text tiddler="$:/config/project-thing/on-hold-tag" tag="input" />|
+|[[Later|$:/config/project-thing/later-tag]] |<$edit-text tiddler="$:/config/project-thing/later-tag" tag="input" />|
+|[[Inbox|$:/config/project-thing/inbox-tag]] |<$edit-text tiddler="$:/config/project-thing/inbox-tag" tag="input" />|
+|[[Progress|$:/config/project-thing/progress-tag]] |<$edit-text tiddler="$:/config/project-thing/progress-tag" tag="input" />|
+
+!!!! Weirder Tags
+
+Tags I might remove in future versions. Not as well thought out or useful, maybe.
+
+|[[Zen Garden|$:/config/project-thing/zen-garden-tag]] |<$edit-text tiddler="$:/config/project-thing/zen-garden-tag" tag="input" />|
+|[[Bug|$:/config/project-thing/bug-tag]] |<$edit-text tiddler="$:/config/project-thing/bug-tag" tag="input" />|
+|[[Pie-in-the-sky|$:/config/project-thing/pits-tag]] |<$edit-text tiddler="$:/config/project-thing/pits-tag" tag="input" />|

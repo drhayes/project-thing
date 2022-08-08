@@ -1,16 +1,16 @@
 created: 20220104225400791
 description: Show the list of todos that are on deck and need doing right now.
-modified: 20220201194501107
+modified: 20220808043717137
 tags: Template
 title: $:/plugins/drhayes/project-thing/ui/nowTodos
 type: text/vnd.tiddlywiki
 
-<$list filter="[all[tiddlers]tag[Todo]tag[Doing]count[]compare:integer:gt[0]]">
+<$list filter="[all[tiddlers]tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/doing-tag}count[]compare:integer:gt[0]]">
 
 !! Now
 
 <$list
-  filter="[all[tiddlers]tag[Todo]tag[Doing]sortan[]]"
+  filter="[all[tiddlers]tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/doing-tag}sortan[]]"
 	template="$:/plugins/drhayes/project-thing/ui/todos/todoListItem" />
 
 </$list>

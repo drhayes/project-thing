@@ -1,5 +1,5 @@
 created: 20220204163950511
-modified: 20220204164432096
+modified: 20220808040342117
 tags: $:/tags/Macro
 title: $:/plugins/drhayes/project-thing/macro/todo-actions
 type: text/vnd.tiddlywiki
@@ -10,8 +10,8 @@ type: text/vnd.tiddlywiki
 
 \define pt-check-actions()
     <$action-setfield $field="completed" $value=<<now "[UTC]YYYY0MM0DD0hh0mm0ssXXX">> />
-    <$action-sendmessage $message="tm-remove-tag" $param="Doing" />
-    <$action-sendmessage $message="tm-remove-tag" $param="Later" />
+    <$action-sendmessage $message="tm-remove-tag" $param={{$:/config/project-thing/doing-tag}} />
+    <$action-sendmessage $message="tm-remove-tag" $param={{$:/config/project-thing/later-tag}} />
 \end
 
 \define pt-uncheck-actions()

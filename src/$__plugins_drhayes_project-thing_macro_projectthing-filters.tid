@@ -1,77 +1,81 @@
 created: 20211201033402443
-modified: 20220621155344853
+modified: 20220807170347481
 tags: $:/tags/Macro
 title: $:/plugins/drhayes/project-thing/macro/projectthing-filters
 type: text/vnd.tiddlywiki
 
 \define pt-is-project()
-[all[current]tag[Project]]
+[all[current]tag{$:/config/project-thing/project-tag}]
 \end
 
 \define pt-is-todo()
-[all[current]tag[Todo]]
+[all[current]tag{$:/config/project-thing/todo-tag}]
 \end
 
 \define pt-is-zen-garden()
-[all[current]tag[Project]tag[Zen Garden]]
+[all[current]tag{$:/config/project-thing/project-tag}tag{$:/config/project-thing/zen-garden-tag}]
 \end
 
 \define pt-is-not-zen-garden()
-[all[current]tag[Project]!tag[Zen Garden]]
+[all[current]tag{$:/config/project-thing/project-tag}!tag{$:/config/project-thing/zen-garden-tag}]
 \end
 
 \define pt-is-open()
-[all[current]!tag[Complete]]
+[all[current]!tag{$:/config/project-thing/complete-tag}]
 \end
 
 \define pt-is-complete()
-[all[current]tag[Complete]]
+[all[current]tag{$:/config/project-thing/complete-tag}]
 \end
 
 \define pt-is-on-hold()
-[all[current]tag[On-hold]]
+[all[current]tag{$:/config/project-thing/on-hold-tag}]
 \end
 
 \define pt-is-not-on-hold()
-[all[current]!tag[On-hold]]
+[all[current]!tag{$:/config/project-thing/on-hold-tag}]
 \end
 
 \define pt-is-bug()
-[all[current]tag[Bug]]
+[all[current]tag{$:/config/project-thing/bug-tag}]
 \end
 
 \define pt-open-todos-subfilter()
-prefix<currentProject>!tag[Complete]!tag[On-hold]!tag[Later]
+prefix<currentProject>!tag{$:/config/project-thing/complete-tag}!tag{$:/config/project-thing/on-hold-tag}!tag{$:/config/project-thing/later-tag}
 \end
 
 \define pt-completed-todos()
-[prefix<currentTiddler>tag[Todo]tag[Complete]]
+[prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/complete-tag}]
 \end
 
 \define pt-recently-completed-todos()
-[prefix<currentTiddler>tag[Todo]tag[Complete]!sort[completed]first[10]]
+[prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/complete-tag}!sort[completed]first[10]]
 \end
 
 \define pt-later-todos()
-[prefix<currentTiddler>tag[Todo]tag[Later]] +[contains:project<currentTiddler>tag[Todo]tag[Later]]
+[prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/later-tag}] +[contains:project<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/later-tag}]
+\end
+
+\define pt-has-later-todos()
+[prefix<currentTiddler>tag{$:/config/project-thing/todo-tag}tag{$:/config/project-thing/later-tag}count[]compare:integer:gt[0]]
 \end
 
 \define pt-active-projects()
-[tag[Project]!tag[Complete]!tag[PITS]!tag[On-hold]!has[draft.of]sortan[]]
+[tag{$:/config/project-thing/project-tag}!tag{$:/config/project-thing/complete-tag}!tag{$:/config/project-thing/pits-tag}!tag{$:/config/project-thing/on-hold-tag}!has[draft.of]sortan[]]
 \end
 
 \define pt-is-doing()
-[all[current]tag[Doing]]
+[all[current]tag{$:/config/project-thing/doing-tag}]
 \end
 
 \define pt-is-not-doing()
-[all[current]!tag[Doing]]
+[all[current]!tag{$:/config/project-thing/doing-tag}]
 \end
 
 \define pt-is-later()
-[all[current]tag[Later]]
+[all[current]tag{$:/config/project-thing/later-tag}]
 \end
 
 \define pt-is-not-later()
-[all[current]!tag[Later]]
+[all[current]!tag{$:/config/project-thing/later-tag}]
 \end
