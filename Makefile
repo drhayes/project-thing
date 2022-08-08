@@ -1,7 +1,6 @@
 .PHONY: all clean serve
 
 TW := node_modules/.bin/tiddlywiki
-SOURCES := $(shell find wiki/ src/)
 
 all: out/index.html
 
@@ -24,7 +23,7 @@ wiki/plugins/project-thing: wiki/plugins
 wiki/plugins:
 	mkdir -p wiki/plugins
 
-out/index.html: out node_modules $(SOURCES) wiki/plugins/project-thing src/plugin.info
+out/index.html: out node_modules wiki/plugins/project-thing src/plugin.info
 	@$(TW) --version
 	@$(TW) ./wiki/ --build index
 
