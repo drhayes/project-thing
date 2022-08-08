@@ -1,4 +1,7 @@
+created: 20220808050850896
+modified: 20220808051935283
 title: $:/plugins/drhayes/project-thing/README
+type: text/vnd.tiddlywiki
 
 \define plugin() $:/plugins/drhayes/project-thing
 \define install()
@@ -24,3 +27,16 @@ Drag this to your ~TiddlyWiki:
 
 <<install>>
 
+!!! Usage
+
+By default, tag a tiddler with <$macrocall $name="tag" tag={{$:/config/project-thing/project-tag}} /> to make it a project. That will add some functionality to the tiddler for tracking todos. Check out the [[Example Project]] to see what I mean.
+
+Here is an example of [[A Completed Project]]. Note that it has some completed todos.
+
+Try transcluding the [[$:/plugins/drhayes/project-thing/ui/dashboard]] template to create an overall view of your Project Thing. I put mine in a tiddler called "Dashboard" and simply have `{{$:/plugins/drhayes/project-thing/ui/dashboard}}` in there to see what I've got going on.
+
+You can also [[create a kind of journal of your progress for a todo|Example Project/This todo is going to take a long time and has a progress journal in it.]]. Each progress entry is another tiddler to record notes in.
+
+!!! Settings
+
+[[Check out the settings panel for some settings you probably shouldn't change.|$:/plugins/drhayes/project-thing/ui/settings]]

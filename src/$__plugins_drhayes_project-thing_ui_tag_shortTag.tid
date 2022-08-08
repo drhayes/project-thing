@@ -6,7 +6,7 @@ title: $:/plugins/drhayes/project-thing/ui/tag/shortTag
 type: text/vnd.tiddlywiki
 
 <$vars
-	foregroundColor="white"
+	foregroundColor=<<color primary>>
 	backgroundColor={{{ [<currentTiddler>get[color]] }}}
 >
 	<span class="pt-short-tag" style=<<tag-pill-styles>> title={{{ [<currentTiddler>get[title]] }}}>

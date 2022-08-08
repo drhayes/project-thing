@@ -1,20 +1,22 @@
 caption: Project Thing
 created: 20220806213553527
-list-after: $:/core/ui/ControlPanel/Settings/TiddlyWiki
+list-after: $:/core/ui/ControlPanel/KeyboardShortcuts
 modified: 20220808045349647
-tags: $:/tags/ControlPanel/SettingsTab
+tags: $:/tags/ControlPanel
 title: $:/plugins/drhayes/project-thing/ui/settings
 type: text/vnd.tiddlywiki
 
 These settings let you customize the behavior of [[Project Thing|$:/plugins/drhayes/project-thing]].
 
-!!! Tags
+But, honestly... you probably shouldn't? This was more an exercise in me playing around with configs and settings panels than it was to offer anything useful. Maybe watch this space for future versions?
+
+!! Tags
 
 Customize what Project Thing uses to mark tiddlers it cares about.
 
 Please don't change these if you currently have any tiddlers with these tags managed by Project Thing. It will just break things for you until you re-tag those tiddlers. What a pain that would be.
 
-!!!! Common Tags
+!!! Common Tags
 
 Tags used all the time, all over the place.
 
@@ -27,7 +29,7 @@ Tags used all the time, all over the place.
 |[[Inbox|$:/config/project-thing/inbox-tag]] |<$edit-text tiddler="$:/config/project-thing/inbox-tag" tag="input" />|
 |[[Progress|$:/config/project-thing/progress-tag]] |<$edit-text tiddler="$:/config/project-thing/progress-tag" tag="input" />|
 
-!!!! Weirder Tags
+!!! Weirder Tags
 
 Tags I might remove in future versions. Not as well thought out or useful, maybe.
 

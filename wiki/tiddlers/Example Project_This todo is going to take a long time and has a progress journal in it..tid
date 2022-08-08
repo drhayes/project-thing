@@ -1,0 +1,11 @@
+caption: This todo is going to take a long time and has a progress journal in it.
+created: 20220808050653319
+modified: 20220808051854671
+project: [[Example Project]]
+tags: Todo
+title: Example Project/This todo is going to take a long time and has a progress journal in it.
+type: text/vnd.tiddlywiki
+
+The `<<todo-progress>>` macro lets you record progress on a todo and display it in a day-bucketed list.
+
+<<todo-progress>>

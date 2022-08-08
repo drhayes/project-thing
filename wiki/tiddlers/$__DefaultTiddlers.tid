@@ -4,3 +4,10 @@ title: $:/DefaultTiddlers
 type: text/vnd.tiddlywiki
 
 project-thing-plugin
+Dashboard
+Doing
+[[Example Project]]
+[[Example Project/A todo for the example project.]]
+[[Example Project/Another todo for the example project.]]
+[[Example Project/This todo is going to take a long time and has a progress journal in it.]]
+[[A Completed Project]]
