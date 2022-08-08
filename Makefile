@@ -11,7 +11,7 @@ clean:
 serve: node_modules wiki/plugins/project-thing src/plugin.info
 	$(TW) wiki/ --listen port=9999
 
-src/plugin.info: src/$$__plugins_drhayes_project-thing_version.json
+src/plugin.info: src/version.json
 	./etc/setVersion.sh
 
 node_modules:
@@ -24,8 +24,8 @@ wiki/plugins:
 	mkdir -p wiki/plugins
 
 out/index.html: out node_modules wiki/plugins/project-thing src/plugin.info
-	@$(TW) --version
-	@$(TW) ./wiki/ --build index
+	$(TW) --version
+	$(TW) ./wiki/ --build index
 
 out:
 	mkdir -p out

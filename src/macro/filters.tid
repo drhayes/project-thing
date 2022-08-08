@@ -1,7 +1,7 @@
 created: 20211201033402443
 modified: 20220807170347481
 tags: $:/tags/Macro
-title: $:/plugins/drhayes/project-thing/macro/projectthing-filters
+title: $:/plugins/drhayes/project-thing/macro/filters
 type: text/vnd.tiddlywiki
 
 \define pt-is-project()
