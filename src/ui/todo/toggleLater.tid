@@ -1,0 +1,17 @@
+description: Displays a button that toggles "Now" and "Later".
+tags: Template $:/tags/project-thing/TodoAction
+title: $:/plugins/drhayes/project-thing/ui/todo/toggleLater
+type: text/vnd.tiddlywiki
+
+<$list filter=<<pt-is-not-later>>>
+	<$button message="tm-add-tag" param={{$:/config/project-thing/later-tag}} tag="a" class="pt-later-link">
+		Now
+		<$action-sendmessage $message="tm-remove-tag" $param={{$:/config/project-thing/doing-tag}} />
+	</$button>
+</$list>
+
+<$list filter=<<pt-is-later>>>
+	<$button message="tm-remove-tag" param={{$:/config/project-thing/later-tag}} tag="a" class="pt-later-link">
+		Later
+	</$button>
+</$list>

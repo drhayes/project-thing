@@ -1,18 +1,18 @@
-created: 20220201201820459
-description: Shows the button to toggle a project on-hold or not. Wrap in a field mangler widget!
-modified: 20220808034928090
-tags: Template
+description: Displays a button that toggles "Totally On-hold" and "Currently Doing".
+tags: Template $:/tags/project-thing/ProjectAction
 title: $:/plugins/drhayes/project-thing/ui/project/toggleOnHold
 type: text/vnd.tiddlywiki
 
-<$list filter=<<pt-is-on-hold>>>
-	<$button message="tm-remove-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
-		Totally On-hold
-	</$button>
-</$list>
-
-<$list filter=<<pt-is-not-on-hold>>>
-	<$button message="tm-add-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
-		Currently Doing
-	</$button>
+\whitespace trim
+<$list filter=<<pt-is-open>>>
+	<$list filter=<<pt-is-on-hold>>>
+		<$button message="tm-remove-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
+			Totally On-hold
+		</$button>
+	</$list>
+	<$list filter=<<pt-is-not-on-hold>>>
+		<$button message="tm-add-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
+			Currently Doing
+		</$button>
+	</$list>
 </$list>

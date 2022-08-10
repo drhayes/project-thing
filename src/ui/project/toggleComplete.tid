@@ -1,0 +1,18 @@
+description: Displays a button that toggles "Not Complete" and "Completed".
+tags: Template $:/tags/project-thing/ProjectAction
+title: $:/plugins/drhayes/project-thing/ui/project/toggleComplete
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<$list filter=<<pt-is-not-zen-garden>> variable="ignore">
+	<$list filter=<<pt-is-open>> variable="ignore">
+		<$button message="tm-add-tag" tag="a" param={{$:/config/project-thing/complete-tag}} class="pt-complete-link">
+			Not Complete
+		</$button>
+	</$list>
+	<$list filter=<<pt-is-complete>> variable="ignore">
+		<$button message="tm-remove-tag" tag="a" param={{$:/config/project-thing/complete-tag}} class="pt-complete-link">
+			Completed
+		</$button>
+	</$list>
+</$list>

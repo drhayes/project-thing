@@ -7,33 +7,31 @@ transcludedin: Any tiddler tagged with the configured project tag, usually <<tag
 type: text/vnd.tiddlywiki
 
 <$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
-
   <$list filter=<<pt-is-project>> variable="ignore">
-	
 		{{||$:/plugins/drhayes/project-thing/ui/project/completeBanner}}
 
-		{{||$:/plugins/drhayes/project-thing/ui/project/projectActions}}
+		<$fieldmangler>
+			<$list filter="[all[shadows+tiddlers]tag[$:/tags/project-thing/ProjectAction]]" variable="listItem">
+				<$transclude tiddler=<<listItem>>/>
+			</$list>
+		</$fieldmangler>
 
 		<$list filter=<<pt-is-open>> variable="ignore">
-					
 			<$vars todo-tags={{$:/config/project-thing/todo-tag}}>
 				{{||$:/plugins/drhayes/project-thing/ui/todos/addTodo}}
 			</$vars>
-			
 		</$list>
 
 		<$vars drag-handles="yesplease" currentProject=<<currentTiddler>>>
 			<<todo-list>>
 		</$vars>
-		
+
 		{{||$:/plugins/drhayes/project-thing/ui/todos/showCompletedTodos}}
-		
+
 		{{||$:/plugins/drhayes/project-thing/ui/todos/showRecentlyCompleted}}
-		
+
 		<$list filter=<<pt-has-later-todos>> variable="ignore">
 			{{||$:/plugins/drhayes/project-thing/ui/todos/showLaterTodos}}
 		</$list>
-	
 	</$list>
-
 </$reveal>
