@@ -4,9 +4,6 @@ tags:
 title: $:/plugins/drhayes/project-thing/ui/inbox
 type: text/vnd.tiddlywiki
 
-\define inbox-todo-tags()
-\end
-
 !! Inbox
 
 <$set name="todo-tags" filter="[{$:/config/project-thing/todo-tag}] [{$:/config/project-thing/inbox-tag}]">
