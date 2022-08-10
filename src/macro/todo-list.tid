@@ -5,10 +5,12 @@ title: $:/plugins/drhayes/project-thing/macro/todo-list
 type: text/vnd.tiddlywiki
 
 \define todo-list()
-	<$macrocall
-		$name="list-tagged-draggable"
-		tag={{$:/config/project-thing/todo-tag}}
-		subFilter=<<pt-open-todos-subfilter>>
-		itemTemplate="$:/plugins/drhayes/project-thing/ui/todos/todoListItem"
-	/>
+	<div class="pt-todo-list">
+		<$macrocall
+			$name="list-tagged-draggable"
+			tag={{$:/config/project-thing/todo-tag}}
+			subFilter=<<pt-open-todos-subfilter>>
+			itemTemplate="$:/plugins/drhayes/project-thing/ui/todos/todoListItem"
+		/>
+	</div>
 \end

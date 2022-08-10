@@ -6,13 +6,13 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 <$list filter=<<pt-is-not-zen-garden>> variable="ignore">
 	<$list filter=<<pt-is-open>> variable="ignore">
-		<$button message="tm-add-tag" tag="a" param={{$:/config/project-thing/complete-tag}} class="pt-complete-link">
-			Not Complete
+		<$button message="tm-add-tag" param={{$:/config/project-thing/complete-tag}} class="pt-action-button">
+			{{$:/plugins/drhayes/project-thing/images/check}} Not Complete
 		</$button>
 	</$list>
 	<$list filter=<<pt-is-complete>> variable="ignore">
-		<$button message="tm-remove-tag" tag="a" param={{$:/config/project-thing/complete-tag}} class="pt-complete-link">
-			Completed
+		<$button message="tm-remove-tag" param={{$:/config/project-thing/complete-tag}} class="pt-action-button">
+			{{$:/plugins/drhayes/project-thing/images/check}} Completed
 		</$button>
 	</$list>
 </$list>

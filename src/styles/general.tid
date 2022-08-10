@@ -1,0 +1,13 @@
+tags: $:/tags/Stylesheet
+title: $:/plugins/drhayes/project-thing/styles/general
+type: text/vnd.tiddlywiki
+
+.pt-action-button {
+	font-size: 80%;
+	padding: .25em .5em;
+	border-radius: .25em;
+}
+
+.pt-todo-list {
+	margin: 1em 0;
+}

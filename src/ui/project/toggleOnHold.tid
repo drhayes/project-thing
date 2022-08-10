@@ -6,13 +6,13 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 <$list filter=<<pt-is-open>>>
 	<$list filter=<<pt-is-on-hold>>>
-		<$button message="tm-remove-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
-			Totally On-hold
+		<$button message="tm-remove-tag" param={{$:/config/project-thing/on-hold-tag}} class="pt-action-button">
+			{{$:/plugins/drhayes/project-thing/images/pause}} Totally On-hold
 		</$button>
 	</$list>
 	<$list filter=<<pt-is-not-on-hold>>>
-		<$button message="tm-add-tag" tag="a" param={{$:/config/project-thing/on-hold-tag}} class="pt-toggle-on-hold-link">
-			Currently Doing
+		<$button message="tm-add-tag" param={{$:/config/project-thing/on-hold-tag}} class="pt-action-button">
+			{{$:/plugins/drhayes/project-thing/images/play}} Currently Doing
 		</$button>
 	</$list>
 </$list>
