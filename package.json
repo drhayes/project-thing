@@ -1,6 +1,6 @@
 {
   "name": "project-thing",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "A Tiddlywiki plugin for managing projects and todos.",
   "scripts": {
     "wiki": "tiddlywiki ./wiki --listen port=9999"
