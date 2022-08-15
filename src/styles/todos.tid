@@ -61,6 +61,7 @@ type: text/vnd.tiddlywiki
 }
 
 .pt-todo-list-item .pt-drag-handle svg {
+	stroke: <<color primary>>;
 	vertical-align: middle;
 }
 

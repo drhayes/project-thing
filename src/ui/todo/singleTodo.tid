@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 		<$checkbox tag={{$:/config/project-thing/complete-tag}} actions=<<pt-save-actions>> checkactions=<<pt-check-actions>> uncheckactions=<<pt-uncheck-actions>>>
 			{{||$:/plugins/drhayes/project-thing/ui/todo/todoCheckbox}}
 			<$link>
-				<$text text={{{ [all[current]trim<currentProject>trim[/]] }}}/>
+				<$text text={{{ [all[current]get[caption]] ~[all[current]trim<currentProject>trim[/]] }}}/>
 			</$link>
 		</$checkbox>
 	</$fieldmangler>
