@@ -1,0 +1,14 @@
+caption: Current Projects
+created: 20220823143358167
+description: List of current projects from Project Thing.
+modified: 20220823150322052
+tags: $:/tags/SideBar
+title: $:/plugins/drhayes/project-thing/ui/currentProjects
+
+<ol>
+	<$list filter=<<pt-active-projects>>>
+		<li>
+			<$link />
+		</li>
+	</$list>
+</ol>
