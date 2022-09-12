@@ -5,10 +5,8 @@ modified: 20220823150322052
 tags: $:/tags/SideBar
 title: $:/plugins/drhayes/project-thing/ui/currentProjects
 
-<ol>
-	<$list filter=<<pt-active-projects>>>
-		<li>
-			<$link />
-		</li>
-	</$list>
-</ol>
+!! Projects
+
+<$macrocall $name="list-links" filter=<<pt-active-projects>> />
+
+{{$:/plugins/drhayes/project-thing/ui/nowTodos}}

@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[all[current]tag{$:/config/project-thing/todo-tag}has[project]]">
 <$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
 
-''Project'': <$link to={{{ [enlist{!!project}] }}} />
+''Project'': <$link to={{!!project}} />
 
 </$reveal>
 </$list>

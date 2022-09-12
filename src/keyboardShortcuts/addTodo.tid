@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
 	openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}}
 	openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}}
 	relinkOnRename={{$:/config/RelinkOnRename}}>
-	<$set name="inbox-todo-tags" filter="[{$:/config/project-thing/todo-tag}] [{$:/config/project-thing/inbox-tag}]">
+	<$set name="inbox-todo-tags" filter="[{$:/config/project-thing/todo-tag}]">
 		<$action-sendmessage $message="tm-new-tiddler" tags=<<inbox-todo-tags>> />
 	</$set>
 </$navigator>
