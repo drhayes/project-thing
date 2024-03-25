@@ -7,12 +7,12 @@ type: text/vnd.tiddlywiki
 <$list filter=<<pt-is-not-zen-garden>> variable="ignore">
 	<$list filter=<<pt-is-open>> variable="ignore">
 		<$button message="tm-add-tag" param={{$:/config/project-thing/complete-tag}} class="pt-action-button">
-			{{$:/plugins/drhayes/project-thing/images/check}} Not Complete
+			{{$:/plugins/drhayes/project-thing/images/check}} Set to Complete
 		</$button>
 	</$list>
 	<$list filter=<<pt-is-complete>> variable="ignore">
 		<$button message="tm-remove-tag" param={{$:/config/project-thing/complete-tag}} class="pt-action-button">
-			{{$:/plugins/drhayes/project-thing/images/check}} Completed
+			{{$:/plugins/drhayes/project-thing/images/check}} Set to Not Completed
 		</$button>
 	</$list>
 </$list>

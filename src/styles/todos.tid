@@ -24,12 +24,18 @@ type: text/vnd.tiddlywiki
 }
 
 .pt-add-todo {
+	display: flex;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
-.pt-add-todo input[type="text"] {
-	width: 100%;
+.pt-add-todo .pt-add-todo-input-container {
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+
+.pt-add-todo-input {
+  width: 100%;
 }
 
 .pt-todo-pinned {

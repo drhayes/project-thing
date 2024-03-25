@@ -27,12 +27,16 @@ type: text/vnd.tiddlywiki
 
 <div class="pt-add-todo">
 	<$vars stateTiddler=<<qualify "$:/temp/projectThing/add-todo-form">>>
-		<$keyboard key="enter">
+		<$keyboard
+			key="enter"
+			class="pt-add-todo-input-container"
+		>
 			<<add-todo-actions>>
 			<$edit-text
 				tiddler=<<stateTiddler>>
 				field="todo-name"
 				placeholder="Add a todo here..."
+				class="pt-add-todo-input"
 			/>
 		</$keyboard>
 	</$vars>

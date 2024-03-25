@@ -1,7 +1,7 @@
 caption: {{$:/plugins/drhayes/project-thing/images/check-square}} mark-complete
 created: 20211123204751949
 description: Display a checkbox for marking Todo tiddlers as Complete.
-list-before: $:/core/ui/Buttons/close
+list-before: $:/core/ui/Buttons/close $:/core/ui/Buttons/save
 modified: 20220808041121194
 tags: $:/tags/ViewToolbar Template $:/tags/EditToolbar
 title: $:/plugins/drhayes/project-thing/ui/toolbar/todoCheckboxToolbar

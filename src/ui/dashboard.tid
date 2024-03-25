@@ -7,8 +7,6 @@ type: text/vnd.tiddlywiki
 
 {{$:/plugins/drhayes/project-thing/ui/nowTodos}}
 
-{{$:/plugins/drhayes/project-thing/ui/inbox}}
-
 !! Projects
 
 <ol>
@@ -18,5 +16,4 @@ type: text/vnd.tiddlywiki
 		</li>
 	</$list>
 </ol>
-
 
