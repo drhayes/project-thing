@@ -6,18 +6,8 @@ title: $:/plugins/drhayes/project-thing/ui/todos/todoListItem
 type: text/vnd.tiddlywiki
 
 <div class="pt-todo-list-item">
-  <$list filter="[<drag-handles>!is[blank]]" variable="ignore">
-		<$draggable
-			tag="span"
-			class="pt-drag-handle"
-			tiddler={{!!title}}
-		>
-			{{$:/plugins/drhayes/project-thing/images/menu}}
-		</$draggable>
-	</$list>
-
 	{{||$:/plugins/drhayes/project-thing/ui/todo/singleTodo}}
-	
+
 	<div class="pt-labels">
 		<$list filter=<<pt-is-bug>> variable="ignore">
 			<$macrocall $name="short-tag" tag={{$:/config/project-thing/bug-tag}} />

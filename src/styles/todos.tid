@@ -60,17 +60,6 @@ type: text/vnd.tiddlywiki
 	justify-content: space-between;
 }
 
-.pt-todo-list-item .pt-drag-handle {
-	flex-basis: 1em;
-	margin-right: .5em;
-	cursor: pointer;
-}
-
-.pt-todo-list-item .pt-drag-handle svg {
-	stroke: <<color primary>>;
-	vertical-align: middle;
-}
-
 .pt-todo-list-item .pt-todo {
 	flex-grow: 1;
 }
